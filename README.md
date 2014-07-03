@@ -2,9 +2,15 @@ dna-sequence-alignment-cli
 ==========================
 
 Console tool for DNA or protein sequence alignment.
-It uses https://github.com/arianpasquali/dna-sequence-alignment lib.
 
 Supports local and global alignments considering BLOSUM or PAM cost matrix.
+
+Dependency
+----------
+It uses https://github.com/arianpasquali/dna-sequence-alignment lib.
+Clone it and install it on your local maven repo:
+
+    mvn install:install-file -Dfile=dna-sequence-alignment-0.1-SNAPSHOT.jar -DgroupId=pt.fcup.bioinformatics -DartifactId=dna-sequence-alignment -Dversion=0.1-SNAPSHOT -Dpackaging=jar
 
 Build
 -----
