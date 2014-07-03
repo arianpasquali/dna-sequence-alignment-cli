@@ -20,7 +20,7 @@ Build
 -----
 Once you clone this repo just run the following command to create the package:
 
-mvn clean package assembly:single
+    mvn clean package assembly:single
 
 Usage
 -----
