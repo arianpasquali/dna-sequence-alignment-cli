@@ -2,6 +2,7 @@ dna-sequence-alignment-cli
 ==========================
 
 Console tool for DNA or protein sequence alignment.
+Console interface for the dna-sequence-alignment library.
 
 Supports local and global alignments considering BLOSUM or PAM cost matrix.
 
