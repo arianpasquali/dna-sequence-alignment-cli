@@ -1,0 +1,3 @@
+matrix.cost=PAM
+alignment.type=GLOBAL
+sequences=GAATTCAGTTA;GGATCGA
