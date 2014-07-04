@@ -20,7 +20,7 @@
 
 		<fileSet>
 			<includes>
-                <include>input_example.txt</include>
+                <include>pyrococcus_vs_thermococcus.txt</include>
 				<include>README*</include>
 				<include>LICENSE*</include>
 			</includes>
