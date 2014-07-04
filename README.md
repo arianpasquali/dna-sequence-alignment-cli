@@ -31,7 +31,7 @@ Untar and run the sample config:
     tar zxvf dna-sequence-alignment-cli-bin.tar.gz
     cd dna-sequence-alignment-cli
 
-    java -jar dna-sequence-alignment-cli.jar -input input_example.txt
+    java -jar dna-sequence-alignment-cli.jar -input pyrococcus_vs_thermococcus.txt
 
 result:
 
@@ -40,18 +40,18 @@ result:
     ************************************************************
     Loading configuration files...
     [configuration] *******************************************
-    matrix.cost: PAM
+    matrix.cost: BLOSUM
     alignment.type: GLOBAL
-    sequences: [GAATTCAGTTA, GGATCGA]
+    sequences: [MAWKVSVDQDTCIGDAICASLCPDVFEMNDEGKAQPKVEVIEDEELYNCAKEAMEACPVS, MKVKLDKDTCIGCGVCASICPDVFEMDDDGKAKVIMEETDLECAKEAAESCPTGSI]
     agent.version: FCUP Sequence-Alignment-CLI 0.1-SNAPSTHOT
-    config.file.path: input_example.txt
+    config.file.path: ../../pyrococcus_vs_thermococcus.txt
     ************************************************************
     AlignmentResult{
-     method='global:pam'
+     method='global:blosum'
      score=12
 
-    AATTCAGTTA
-    --GA-TCGA-
+    AWKVSVDQDTCIGDAICASLCPDVFEMNDEGKAQPKVEVIEDEELYNCAKEA-MEACPVS
+    --KVKLDKDTCIGCGVCASICPDVFEMDDDGKA-KVIMEETDLECAKEA--AESCPTGSI
 
     }
 
