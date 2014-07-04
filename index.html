@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dna-sequence-alignment-cli by arianpasquali</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Dna-sequence-alignment-cli</h1>
+        <p>Console tool for DNA or protein sequence alignment</p>
+
+        <p class="view"><a href="https://github.com/arianpasquali/dna-sequence-alignment-cli">View the Project on GitHub <small>arianpasquali/dna-sequence-alignment-cli</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/arianpasquali/dna-sequence-alignment-cli/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/arianpasquali/dna-sequence-alignment-cli/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/arianpasquali/dna-sequence-alignment-cli">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a name="dna-sequence-alignment-tool" class="anchor" href="#dna-sequence-alignment-tool"><span class="octicon octicon-link"></span></a>DNA Sequence Alignment Tool</h3>
+
+<h1></h1>
+
+<p>Console tool for DNA or protein sequence alignment.
+Console interface for the dna-sequence-alignment library.</p>
+
+<p>Supports local and global alignments considering BLOSUM or PAM cost matrix.</p>
+
+<h2>
+<a name="dependency" class="anchor" href="#dependency"><span class="octicon octicon-link"></span></a>Dependency</h2>
+
+<p>It uses <a href="https://github.com/arianpasquali/dna-sequence-alignment">https://github.com/arianpasquali/dna-sequence-alignment</a> lib.
+Clone it and install it on your local maven repo:</p>
+
+<pre><code>mvn install:install-file -Dfile=dna-sequence-alignment-0.1-SNAPSHOT.jar \
+                         -DgroupId=pt.fcup.bioinformatics \
+                         -DartifactId=dna-sequence-alignment \
+                         -Dversion=0.1-SNAPSHOT \
+                         -Dpackaging=jar
+</code></pre>
+
+<h2>
+<a name="build" class="anchor" href="#build"><span class="octicon octicon-link"></span></a>Build</h2>
+
+<p>Once you clone this repo just run the following command to create the package:</p>
+
+<pre><code>mvn clean package assembly:single
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Untar and run the sample config:</p>
+
+<pre><code>cd target
+tar zxvf dna-sequence-alignment-cli-bin.tar.gz
+cd dna-sequence-alignment-cli
+
+java -jar dna-sequence-alignment-cli.jar -input pyrococcus_vs_thermococcus.txt
+</code></pre>
+
+<p>This 'pyrococcus_vs_thermococcus.txt' example is an input file for global alignment considering <a href="http://www.ncbi.nlm.nih.gov/protein/499322557">Pyrococcus furiosus</a> against <a href="http://www.ncbi.nlm.nih.gov/protein/503232942">Thermococcus barophilus</a></p>
+
+<p>result:</p>
+
+<pre><code>************************************************************
+Version : FCUP Sequence-Alignment-CLI 0.1-SNAPSTHOT
+************************************************************
+Loading configuration files...
+[configuration] *******************************************
+matrix.cost: BLOSUM
+alignment.type: GLOBAL
+sequences: [MAWKVSVDQDTCIGDAICASLCPDVFEMNDEGKAQPKVEVIEDEELYNCAKEAMEACPVS, MKVKLDKDTCIGCGVCASICPDVFEMDDDGKAKVIMEETDLECAKEAAESCPTGSI]
+agent.version: FCUP Sequence-Alignment-CLI 0.1-SNAPSTHOT
+config.file.path: ../../pyrococcus_vs_thermococcus.txt
+************************************************************
+AlignmentResult{
+ method='global:blosum'
+ score=12
+
+AWKVSVDQDTCIGDAICASLCPDVFEMNDEGKAQPKVEVIEDEELYNCAKEA-MEACPVS
+--KVKLDKDTCIGCGVCASICPDVFEMDDDGKA-KVIMEETDLECAKEA--AESCPTGSI
+
+}
+</code></pre>
+
+<h2>
+<a name="config-file" class="anchor" href="#config-file"><span class="octicon octicon-link"></span></a>Config file</h2>
+
+<pre><code>matrix.cost=&lt;PAM,BLOSUM,NONE&gt;
+alignment.type=&lt;GLOBAL,LOCAL&gt;
+sequences=&lt;sequence A&gt;;&lt;sequence B&gt;
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/arianpasquali">arianpasquali</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
