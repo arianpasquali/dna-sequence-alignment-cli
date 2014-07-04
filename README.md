@@ -33,7 +33,7 @@ Untar and run the sample config:
 
     java -jar dna-sequence-alignment-cli.jar -input pyrococcus_vs_thermococcus.txt
 
-On this example we run global alignment with two proteins, [Pyrococcus furiosus](http://www.ncbi.nlm.nih.gov/protein/499322557) against [Thermococcus barophilus](http://www.ncbi.nlm.nih.gov/protein/503232942)
+This 'pyrococcus_vs_thermococcus.txt' example is an input file for global alignment considering [Pyrococcus furiosus](http://www.ncbi.nlm.nih.gov/protein/499322557) against [Thermococcus barophilus](http://www.ncbi.nlm.nih.gov/protein/503232942)
 
 result:
 
